@@ -9,3 +9,5 @@ def home(request):
     }
     return render(request, "home/home.html", context)
 
+def anal(request):
+    return render(request, 'stinger/anal.html')

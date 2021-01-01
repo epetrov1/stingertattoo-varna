@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -8,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     {% block headers %}{% endblock headers %}
-    
+    <link rel="stylesheet" href="{% static 'css/cookie.css' %}">
   </head>
   <body class="bg-dark">
   <!-- facebook JS SDK code for share button -->
@@ -24,6 +25,12 @@
       </div>
     {% include "stinger/footer.html" %}
 
+    <!--https://www.youtube.com/watch?v=R_-oGJBg3nw&t=89s-->
+    <div class="cookies-container">
+      <p>We use cookies in this website    <a href="#">Read more</a></p>
+      <button class="cookie-btn">Ok</button>
+    </div>
+    <script src="{% static 'js/cookie.js' %}"></script>
     <!--Fcebook messenger snipet-->
     <!-- Load Facebook SDK for JavaScript -->
       {% comment %} <div id="fb-root"></div>

@@ -1,0 +1,30 @@
+.cookies-container {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    background: #2f3640;
+    color: #f5f6fa;
+    padding: 0 32px;
+    transition: 400ms;
+}
+
+.cookies-container.active {
+    bottom: 0;
+}
+
+.cookies-container a {
+    color: #f5f6fa;
+
+}
+
+.cookie-btn {
+    background: #e84118;
+    border: 0;
+    color: #f5f6fa;
+    padding: 12px 48px;
+    font-size: 18px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
