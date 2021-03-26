@@ -1,13 +1,13 @@
 from django.db import models
 from datetime import datetime
-from django.template.defaultfilters import slugify
+from slugify import slugify
 
 
 
 
 class BlogPost(models.Model):
     title = models.CharField(max_length=250)
-    slug = models.SlugField(max_length=250, allow_unicode=True)
+    slug = models.SlugField(allow_unicode=True)
     thumbnail = models.ImageField(upload_to='photos/%Y/%m/%d/')
     content = models.TextField()
     featured = models.BooleanField(default=False)
