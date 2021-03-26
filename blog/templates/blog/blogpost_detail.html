@@ -1,0 +1,13 @@
+{% extends 'stinger/base.html' %}
+{% load social_widgets %}
+
+
+{% block content %}
+    <div class="container" align="center" style="color: white">
+        <h1 style="color: white">{{ object.title | safe }}</h1>
+        <p style="color: white" id="summernote" style="color: white">{{ object.content | safe }}</p>
+        <div class="fb-share-button" data-href="https://www.facebook.com/StingerTattooBG" data-layout="button_count" data-size="large"><a target="_blank" href="https://www.facebook.com/StingerTattooBG" class="fb-xfbml-parse-ignore">Share</a></div>
+        <br>
+    </div>
+    <br>
+{% endblock %}

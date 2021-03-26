@@ -1,0 +1,62 @@
+{% extends 'stinger/base.html' %}
+{% load social_widgets %}
+
+{% block content %}
+<div class="container">
+    <h1 class="style: text-white">Контакти</h1>
+        <div class="row">
+                <div class="col-lg-6 col-sm-12 col-md-6">
+                        <form class="form-horizontal" action="" method="post">
+                        <fieldset>
+                            <legend class="text-center" style="color:white">Свържете се нас</legend>
+                    
+                            <!-- Name input-->
+                            <div class="form-group">
+                            <label class="col-md-3 control-label" style="color:white" for="name">Име</label>
+                            <div class="col-md-9">
+                                <input id="name" name="name" type="text" placeholder="Вашето име" class="form-control">
+                            </div>
+                            </div>
+                    
+                            <!-- Email input-->
+                            <div class="form-group">
+                            <label class="col-md-3 control-label" style="color:white" for="email">Вашият email</label>
+                            <div class="col-md-9">
+                                <input id="email" name="email" type="text" placeholder="Вашият email" class="form-control">
+                            </div>
+                            </div>
+                    
+                            <!-- Message body -->
+                            <div class="form-group">
+                            <label class="col-md-3 control-label" style="color:white" for="message">Вашето съобщение</label>
+                            <div class="col-md-9">
+                                <textarea class="form-control" id="message" name="message" placeholder="Вашето съобщение напишете тук..." rows="5"></textarea>
+                            </div>
+                            </div>
+                    
+                            <!-- Form actions -->
+                            <div class="form-group">
+                            <div class="col-md-2 text-right">
+                                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                            </div>
+                            </div>
+                        </fieldset>
+                        </form>
+                </div>
+                <div class="col-lg-6 col-sm-12 col-md-6">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2907.88684313955!2d27.91802591548341!3d43.21186267913889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a455d1014a7d9d%3A0x51f37738b0d3389!2sStinger%20Tattoo!5e0!3m2!1sen!2sbg!4v1615303306723!5m2!1sen!2sbg" width="auto" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <br>
+                    {% social_widget_render 'facebook/likebox.html' href='https://www.facebook.com/StingerTattooBG' %}
+                </div>
+            {% comment %} <div class="row">
+                {% social_widget_render 'facebook/likebox.html' href='https://www.facebook.com/StingerTattooBG' %}
+            </div> {% endcomment %}
+            <br>
+        </div>
+</div>
+
+
+{% endblock content %}
+
+
+

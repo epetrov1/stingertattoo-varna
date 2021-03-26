@@ -1,0 +1,6 @@
+Django==2.2
+django-social-widgets==0.5.0
+django-summernote==0.8.11.6
+Pillow==8.1.1
+pytz==2021.1
+sqlparse==0.4.1
