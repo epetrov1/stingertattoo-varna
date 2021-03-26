@@ -1,13 +1,19 @@
 {% extends 'stinger/base.html' %}
 {% load social_widgets %}
-
+{% block headers %}
+<title>{{ object.title | safe }}</title>
+{% endblock headers %}
 
 {% block content %}
     <div class="container" align="center" style="color: white">
-        <h1 style="color: white">{{ object.title | safe }}</h1>
-        <p style="color: white" id="summernote" style="color: white">{{ object.content | safe }}</p>
-        <div class="fb-share-button" data-href="https://www.facebook.com/StingerTattooBG" data-layout="button_count" data-size="large"><a target="_blank" href="https://www.facebook.com/StingerTattooBG" class="fb-xfbml-parse-ignore">Share</a></div>
-        <br>
+        <div class="row align-items-center">
+            <div class="col-lg-12 col-sm-12 col-md-12">
+                <h1 style="color: white">{{ object.title | safe }}</h1>
+                <p style="color: white" id="summernote">{{ object.content | safe }}</p>
+                <div class="fb-share-button" data-href="https://www.facebook.com/StingerTattooBG" data-layout="button_count" data-size="large"><a target="_blank" href="https://www.facebook.com/StingerTattooBG" class="fb-xfbml-parse-ignore">Share</a></div>
+                <br>
+            </div>
+        </div>
     </div>
     <br>
 {% endblock %}
