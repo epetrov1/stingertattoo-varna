@@ -10,8 +10,9 @@ READ_DOT_ENV_FILE = env.bool('READ_DOT_ENV_FILE', default=False)
 if READ_DOT_ENV_FILE:
     environ.Env.read_env()
 
-DEBUG = env('DEBUG')
-SECRET_KEY = env('SECRET_KEY')
+#DEBUG = env('DEBUG')
+DEBUG = True
+SECRET_KEY = 'uduacx!5an_7_f-dyfy$joeoeq+3^86kk2jbj!vnrg47up-6v6'
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -23,7 +24,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'whitenoise.runserver_nostatic',
+    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -35,7 +36,6 @@ INSTALLED_APPS = [
     'gallery',
     'blog',
     'home',
-    'social_widgets',
     'django_summernote',
 ]
 
@@ -73,8 +73,15 @@ WSGI_APPLICATION = 'stinger.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
-
 DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
+
+
+""" DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': env("DB_NAME"),
@@ -83,7 +90,7 @@ DATABASES = {
         'HOST': env("DB_HOST"),
         'PORT': env("DB_PORT"),
     }
-}
+} """
 
 
 # Password validation
